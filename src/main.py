@@ -47,7 +47,7 @@ parser.add_argument('--mode', type=str, default='train',
 parser.add_argument('--model', type=str, default='../model/dnn_2000h_v1_gpu06.pkl',
                             help='trained model path')
 
-os.environ['CUDA_VISIBLE_DEVICES'] = "5"
+os.environ['CUDA_VISIBLE_DEVICES'] = "4"
 
 args = parser.parse_args()
 args.cuda = not args.no_cuda and torch.cuda.is_available()
@@ -187,6 +187,6 @@ if __name__ == "__main__":
     if args.mode == 'test':
         model_name = args.model
         model = torch.load(model_name)
-        testDataset = FbankDataset('../feature/testHomeNoiseSet.cPickle', transform=ToTensor())
+        testDataset = FbankDataset('../feature/sampleSet_2000h.test.cPickle', transform=ToTensor())
         test_loader = DataLoader(testDataset, batch_size=args.test_batch_size, shuffle=True, num_workers=1)
         test(model, test_loader)

@@ -1,6 +1,7 @@
 """
-transform ali form:
+1. Transform ali form:
     82 phoneId means silence
+2. Down-sampling:
 
 example 1:
 part-03ffc602-dba0-4750-bb81-92c856c659a5 82 34 ; 78 6 ; 37 17 ; 65 17 ; 119 7 ; 69 7 ; 66 20
@@ -56,8 +57,5 @@ for idx, line in enumerate(ali_old):
     # if idx == 1000:
     #     break
 
-
-# print new
-# print len(new)
 
 f1.writelines(ali_new)

@@ -171,8 +171,6 @@ def task3():
     print "ones: ", ones/total
 
 
-
-
 if __name__ == "__main__":
     #  stat = Stat('../data_fbank/ali.phone.sub.txt')
     #  t = stat.stat_on_dataset()

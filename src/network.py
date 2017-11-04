@@ -15,7 +15,20 @@ class DNN(nn.Module):
         self.fc1 = nn.Linear(816, 256)
         self.fc2 = nn.Linear(256, 256)
         self.fc3 = nn.Linear(256, 2)
-        #  self.fc4 = nn.Linear(180, 2)
+
+    def forward(self, x):
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = F.relu(self.fc3(x))
+        return x
+
+
+class DNN_old(nn.Module):
+    def __init__(self):
+        super(DNN_old, self).__init__()
+        self.fc1 = nn.Linear(806, 128)
+        self.fc2 = nn.Linear(128, 128)
+        self.fc3 = nn.Linear(128, 2)
 
     def forward(self, x):
         x = F.relu(self.fc1(x))

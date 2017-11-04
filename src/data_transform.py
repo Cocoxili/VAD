@@ -11,6 +11,7 @@ __Author__ = Zhu.Bq
 
 """
 
+
 def get_fb(file_name):
     """#{{{
     load feature file and transform to dict
@@ -231,6 +232,3 @@ if __name__ == "__main__":
 
     # for i in range(100):
     #     print sampleSet[i]
-
-    # print get_noise_list('../data_fbank/feats.noise.scp')[:5]
-    # print len(get_noise_list('../data_fbank/feats.noise.scp'))

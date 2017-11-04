@@ -10,12 +10,13 @@ import librosa
 import time
 from util import *
 """
-optimize I/O with packet squeence input.
+optimize I/O with packet sequence input.
 __Author__ = Zhu.Bq
 
 """
 
 os.environ['CUDA_VISIBLE_DEVICES'] = "6"
+
 
 class FbankDataset(Dataset):
 #{{{

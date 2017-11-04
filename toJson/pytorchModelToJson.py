@@ -11,18 +11,17 @@ from network import *
 Json structure:
 
 {
-  "calc_freq": 1,
-  "frame_length": 0.025,
-  "shift_length": 0.01,
-  "type":"dnn",
-  "inputSize": [31, 26, 1],
+  "calc_freq": 1, "frame_length": 0.025, "shift_length": 0.01, "type":"dnn", "inputSize": [31, 26, 1],
 
   "layers":
-    [
-        {"layer_type": "fully_connect", "unit_num": 256, "weights": [[],[],...,[]], "bias": []},
-        {"layer_type": "fully_connect", "unit_num": 256, "weights": [[],[],...,[]], "bias": []},
-        {"outputSize": 2, "output_layer_weights": [[]], "output_layer_bias":[]}
-    ]
+  [
+    {"layer_type": "fully_connect", "unit_num": 256, "weights": [[],[],...,[]], "bias": []},
+    {"layer_type": "fully_connect", "unit_num": 256, "weights": [[],[],...,[]], "bias": []}
+  ],
+  
+  "outputSize": 2,
+  "output_layer_weights": [[]],
+  "output_layer_bias":[]
 }
 
 __Author__ = Zhu.Bq
@@ -55,18 +54,17 @@ layer2["bias"] = bias2
 layer2["weight"] = weight2
 layers.append(layer2)
 
-layer3 = {"outputSize": 2}
-layer3["bias"] = bias3
-layer3["weight"] = weight3
-layers.append(layer3)
-
 model_json = {"calc_freq": 1, "frame_length": 0.025, "shift_length": 0.01, "type":"dnn"}
-model_json["inputSize"] = [31, 26, 1]
+model_json["inputSize"] = [17, 48, 1]
 model_json['layers'] = layers
+model_json["outputSize"] = 2
+model_json["output_layer_weights"] = weight3
+model_json["output_layer_bias"] = bias3
+
 
 out = json.dumps(model_json, sort_keys=True)
-out_file = open('./vad_dnn_2000h_epoch4_0.975.json', 'w')
+out_file = open('./vad_dnn_2000h_epoch3_0.975.json', 'w')
 out_file.write(out)
 out_file.close()
 
-print('Json file has been saved as vad_dnn_2000h_epoch4_0.975.json')
+print('Json file has been saved as vad_dnn_2000h_epoch3_0.975.json')
