@@ -1,5 +1,3 @@
-training on ../feature./do.sh: line 1: 33662 Killed                  python main.py --mode=train
-.708434	TrainAcc: 33.98
 Train Epoch: 1 [1280000/4835123 (26%)]	lr:0.008 Loss: 0.081469	TrainAcc: 94.46
 Train Epoch: 1 [2560000/4835123 (53%)]	lr:0.008 Loss: 0.131673	TrainAcc: 95.03
 Train Epoch: 1 [3840000/4835123 (79%)]	lr:0.008 Loss: 0.155128	TrainAcc: 95.30
@@ -3412,8 +3410,4 @@ Train Epoch: 4 [3840000/4842059 (79%)]	lr:0.001 Loss: 0.038475	TrainAcc: 97.33
 Test set: Average loss: 0.0001, Accuracy: 4537964/4656252 (97.46%)
 
 model has been saved as: ../model/dnn_2000h_v1_gpu06.pkl
-training on ../feature/sampleSet_2000h.83.cPickle
-Train Epoch: 4 [0/4760237 (0%)]	lr:0.001 Loss: 0.108842	TrainAcc: 97.33
-Train Epoch: 4 [1280000/4760237 (27%)]	lr:0.001 Loss: 0.054000	TrainAcc: 97.33
-Train Epoch: 4 [2560000/4760237 (54%)]	lr:0.001 Loss: 0.045233	TrainAcc: 97.33
-Train Epoch: 4 [3840000/4760237 (81%)]	lr:0.001 Loss: 0.038176	TrainAcc: 97.33
+
