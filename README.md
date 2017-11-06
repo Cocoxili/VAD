@@ -51,6 +51,6 @@ Typical models for VAD include support vector machine (SVM), Gaussian mixture mo
  
 **Train and Test accuracy**
 
-![TrainTestAcc](https://github.com/Black-Black-Man/VAD/blob/master/log/Acc.png?raw=true)
+![TrainTestAcc](https://github.com/Black-Black-Man/VAD/blob/master/log/ACC.png?raw=true)
 
 
