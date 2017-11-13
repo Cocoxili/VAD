@@ -11,12 +11,9 @@ Typical models for VAD include support vector machine (SVM), Gaussian mixture mo
 
 
 
-
-
-
-
 ### file structure
-	.
+
+    ./
     ├── LICENSE
     ├── README.md
     ├── data_fbank
@@ -29,14 +26,13 @@ Typical models for VAD include support vector machine (SVM), Gaussian mixture mo
     │   ├── testACC.log
     │   └── trainACC.log
     ├── model
-    │   ├── dnn256_2000h_noise_and_reverb_epoch4_test0.975.pkl
+    │   ├── dnn_2000h_v4.pkl
     │   └── model_old.pkl
     ├── src
     │   ├── ali_process.py
     │   ├── data_process.py
     │   ├── data_transform.py
     │   ├── do.sh
-    │   ├── gpu06.log
     │   ├── main.py
     │   ├── network.py
     │   ├── stat.py
@@ -45,9 +41,9 @@ Typical models for VAD include support vector machine (SVM), Gaussian mixture mo
         ├── jsonToPytorchModel.py
         ├── pytorchModelToJson.py
         ├── vad128_128_SNR98_db0_25_RESCALE-45_-15_V1_20170825201833_epoch78_0.928171.json
-        └── vad_dnn_2000h_epoch3_0.975.json
+        └── vad_dnn256_2000h_v2.json
+
         
- 
  
 **Train and Test accuracy**
 
