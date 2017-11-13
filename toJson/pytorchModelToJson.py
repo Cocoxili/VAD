@@ -28,7 +28,7 @@ __Author__ = Zhu.Bq
 
 """
 
-modelfile = '../model/dnn_2000h_v1_gpu06.pkl'
+modelfile = '../model/dnn_2000h_v4.pkl'
 print('loading ' + modelfile + '...')
 
 model = torch.load(modelfile)
@@ -54,8 +54,8 @@ layer2["bias"] = bias2
 layer2["weight"] = weight2
 layers.append(layer2)
 
-model_json = {"calc_freq": 1, "frame_length": 0.025, "shift_length": 0.01, "type":"dnn"}
-model_json["inputSize"] = [17, 48, 1]
+model_json = {"calc_freq": 1, "frame_length": 0.030, "shift_length": 0.02, "type":"dnn"}
+model_json["inputSize"] = [21, 24, 1]
 model_json['layers'] = layers
 model_json["outputSize"] = 2
 model_json["output_layer_weights"] = weight3
@@ -63,7 +63,7 @@ model_json["output_layer_bias"] = bias3
 
 
 out = json.dumps(model_json, sort_keys=True)
-out_file = open('./vad_dnn_2000h_epoch3_0.975.json', 'w')
+out_file = open('./vad_dnn256_2000h_v2.json', 'w')
 out_file.write(out)
 out_file.close()
 
